@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -15,7 +15,9 @@ RUN npm ci --only=production
 # Bundle app source
 COPY . .
 
+RUN chmod +x ./runner.sh
+
 EXPOSE 8080
 EXPOSE 9090
 
-CMD [ "node", "app.js" ]
+CMD [ "/bin/bash", "runner.sh" ]
