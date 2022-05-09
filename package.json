@@ -1,0 +1,36 @@
+{
+  "name": "dual-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olakara/dual-runner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": 2500,
+    "env": {
+      "PORTONE": 8080,
+      "PORTTWO": 9090,
+      "HOST": "0.0.0.0"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/olakara/dual-runner/issues"
+  },
+  "homepage": "https://github.com/olakara/dual-runner#readme"
+}
